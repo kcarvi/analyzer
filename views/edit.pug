@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title word
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    include inc/style.pug
+  body
+    div.container
+      include inc/nav.pug
+      form(
+        method="post"
+        action='/list/' + word._id
+      )
+        label Name
+        input(
+          type='text'
+          name="word"
+          value=word.word )
+        label Description
+        input(
+          type='text'
+          name="description"
+          value=word.description )
+        input(
+          type="submit"
+          value="save"
+        )
+

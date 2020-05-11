@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title home
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    include inc/style.pug
+  body
+    div.container
+      textarea(
+        id='text'
+        placeholder= "Текст кхьихь..."
+      )
+      button#analyzer= "анализун"
+      div#out
+      
+      include inc/spinner.pug
+
+      script
+        include inc/script.js
+

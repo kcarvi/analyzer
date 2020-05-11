@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title list
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    include inc/style.pug
+  body
+    div.container
+      include inc/nav.pug
+      table
+        tbody
+          each word in words
+            tr
+              td.id= word._id
+              td.word= word.word
+              td.description= word.description
+              td.edit
+                a( class="button button-outline" href= '/list/' + word._id ) ✍ edit
+              td.delete
+                a( class="button button-outline" href= '/delete/' + word._id ) ✕ del
